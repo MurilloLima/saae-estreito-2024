@@ -2,7 +2,7 @@
 @section('title', 'Portarias')
 
 @section('content')
-    @include('home.layout.noticia')
+    @include('home.layout.portaria')
     <div class="container-xxl py-5">
         <div class="container px-lg-5">
             <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s"
@@ -11,7 +11,8 @@
                 <h2 class="mt-2">Portarias</h2>
             </div>
             <div class="row g-4">
-                <table class="table table-hover">
+                <table class="table">
+                    
                     <tbody>
                         @foreach ($data as $item)
                             <tr>
@@ -24,7 +25,6 @@
                                 </td>
                             </tr>
                         @endforeach
-
                     </tbody>
                 </table>
             </div>
