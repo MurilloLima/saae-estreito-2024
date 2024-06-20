@@ -18,7 +18,7 @@
                             <tr>
                                 {{-- <th scope="row">1</th> --}}
                                 <td>{{ $item->tipo }}</td>
-                                <td>{{ $item->data }}</td>
+                                <td style="width: 100px">{{ $item->data }}</td>
                                 <td>{{ $item->desc }}</td>
                                 <td>
                                     <a href="{{ asset('upload/portaria/' . $item->file) }}">Baixar</a>
