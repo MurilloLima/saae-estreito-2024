@@ -17,8 +17,8 @@
                  <a href="{{ route('home.pages.index') }}" class="nav-item nav-link">Home</a>
                  <a href="{{ route('home.pages.sobre.index') }}" class="nav-item nav-link">Sobre</a>
                  <a href="{{ route('home.pages.noticias.index') }}" class="nav-item nav-link">Notícias</a>
-                 <a href="{{ route('home.pages.licitacao.index') }}" class="nav-item nav-link">Licitações e
-                     contratos</a>
+                 <a href="{{ route('home.pages.portarias.index') }}" class="nav-item nav-link">Portarias</a>
+                 <a href="{{ route('home.pages.licitacao.index') }}" class="nav-item nav-link">Licitações e contratos</a>
                  <a href="{{ route('home.pages.contatos.index') }}" class="nav-item nav-link">Contatos</a>
              </div>
              <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal"

@@ -9,7 +9,7 @@
               <a href="index3.html" class="nav-link">Home</a>
           </li>
           <li class="nav-item d-none d-sm-inline-block">
-              <a href="#" class="nav-link">Contatos</a>
+              <a href="{{ route('admin.pages.contatos.index') }}" class="nav-link">Contatos</a>
           </li>
       </ul>
 
@@ -46,9 +46,7 @@
               <div class="image">
                   <img src="{{ asset('admin/dist/img/avatar.png') }}" class="img-circle elevation-2" alt="User Image">
               </div>
-              <div class="info">
-                  <a href="#" class="d-block">{{ auth()->user()->name }}</a>
-              </div>
+              
           </div>
 
           <!-- SidebarSearch Form -->
@@ -80,19 +78,26 @@
                       </a>
                       <ul class="nav nav-treeview">
                           <li class="nav-item">
-                              <a href="" class="nav-link">
+                              <a href="{{ route('admin.noticias.index') }}" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Notícias</p>
                               </a>
                           </li>
+                          
                           <li class="nav-item">
-                              <a href="{{ route('admin.licitacoes.index') }}" class="nav-link">
+                              <a href="{{ route('admin.portaria.index') }}" class="nav-link">
+                                  <i class="far fa-circle nav-icon"></i>
+                                  <p>Portaria</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ route('admin.portaria.index') }}" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Licitações e contratos</p>
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a href="{{ route('home.pages.contato.index') }}" class="nav-link">
+                              <a href="{{ route('admin.pages.contatos.index') }}" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Contatos</p>
                               </a>

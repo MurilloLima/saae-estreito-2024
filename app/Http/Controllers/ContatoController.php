@@ -12,7 +12,8 @@ class ContatoController extends Controller
      */
     public function index()
     {
-        //
+        $data = Contato::latest()->get();
+        return view('admin.pages.contatos.index', compact('data'));
     }
 
     /**
