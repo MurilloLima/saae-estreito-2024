@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Licitações e contratos</h1>
+                        <h1>Portarias</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Licitações</li>
+                            <li class="breadcrumb-item active">Portarias</li>
                         </ol>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         @endif
                     </div>
                     <div class="col-md-12">
-                        <a href="{{ route('admin.licitacoes.create') }}" class="btn btn-primary mb-2">Cadastrar</a>
+                        <a href="{{ route('admin.portaria.create') }}" class="btn btn-primary mb-2">Cadastrar</a>
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Últimas adicionadas</h3>
@@ -54,17 +54,19 @@
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                            <th style="width: 10px">#</th>
-                                            <th>Título</th>
+                                            <th style="width: 10px">Tipo</th>
+                                            <th>Data</th>
                                             <th>Descição</th>
-                                            <th style="width: 40px">#</th>
+                                            <th>Arquivo</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($data as $item)
                                             <tr>
-                                                <td>{{ $item->id }}</td>
-                                                <td>{{ $item->title }}</td>
+                                                <td>{{ $item->tipo }}</td>
+                                                <td>{{ $item->data }}</td>
+                                                <td>{{ $item->desc }}</td>
                                                 <td>
                                                     {{ $item->file }}
                                                 </td>

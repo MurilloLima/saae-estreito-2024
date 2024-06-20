@@ -14,7 +14,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home.pages.index');
 Route::get('sobre/', [HomeController::class, 'sobre'])->name('home.pages.sobre.index');
 Route::get('noticias/', [HomeController::class, 'noticias'])->name('home.pages.noticias.index');
 Route::get('noticias/{slug}', [NoticiaController::class, 'view'])->name('home.pages.noticias.view');
-Route::get('portarias/', [NoticiaController::class, 'index'])->name('home.pages.portarias.index');
+Route::get('portarias/', [HomeController::class, 'portaria'])->name('home.pages.portarias.index');
 Route::get('contatos/', [HomeController::class, 'contatos'])->name('home.pages.contatos.index');
 Route::post('contatos/store', [HomeController::class, 'store'])->name('home.pages.contato.store');
 Route::get('licitacao/', [HomeController::class, 'licitacao'])->name('home.pages.licitacao.index');
@@ -43,6 +43,8 @@ Route::middleware('auth')->group(function () {
   
     //portaria
     Route::get('/admin/portaria', [PortariasController::class, 'index'])->name('admin.portaria.index');
+    Route::get('/admin/portaria/create', [PortariasController::class, 'create'])->name('admin.portaria.create');
+    Route::post('/admin/portaria/store', [PortariasController::class, 'store'])->name('admin.portaria.store');
     //contatos
     Route::get('/admin/contatos', [ContatoController::class, 'index'])->name('admin.pages.contatos.index');
 

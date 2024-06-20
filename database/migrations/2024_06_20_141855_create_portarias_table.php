@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('tipo');
             $table->string('data');
+            $table->string('desc');
             $table->string('file');
             $table->timestamps();
         });

@@ -8,13 +8,18 @@ use Illuminate\Http\Request;
 
 class PortariasController extends Controller
 {
+    private $portaria;
+    public function __construct(Portaria $portaria)
+    {
+        $this->portaria = $portaria;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         $data = Portaria::latest()->get();
-        return view('admin.pages.portaria.index');
+        return view('admin.pages.portaria.index', compact('data'));
     }
 
     /**
@@ -22,7 +27,7 @@ class PortariasController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.portaria.create');
     }
 
     /**
@@ -30,7 +35,23 @@ class PortariasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'file' => 'required',
+            'tipo' => 'required',
+            'data' => 'required',
+            'desc' => 'required',
+        ]);
+
+        if ($request->hasFile('file') && $request->file('file')->isValid()) {
+            $imageName = time() . '.' . $request->file->extension();
+            $request->file->move(public_path('upload/portaria'), $imageName);
+            $this->portaria->file = $imageName;
+            $this->portaria->tipo = $request->tipo;
+            $this->portaria->data = $request->data;
+            $this->portaria->desc = $request->desc;
+            $this->portaria->save();
+            return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
+        }
     }
 
     /**

@@ -7,6 +7,7 @@ use App\Models\Admin\Contato;
 use App\Models\Contato as ModelsContato;
 use App\Models\Licitacoe;
 use App\Models\Noticia;
+use App\Models\Portaria;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -89,5 +90,11 @@ class HomeController extends Controller
     {
         $data = Noticia::latest()->get();
         return view('home.pages.noticia.index', compact('data'));
+    }
+    
+    public function portaria()
+    {
+        $data = Portaria::latest()->get();
+        return view('home.pages.portarias.index', compact('data'));
     }
 }
