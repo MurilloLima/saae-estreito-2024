@@ -10,7 +10,7 @@
                     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                     <div class="section-title position-relative mb-4 pb-2">
                         <h6 class="position-relative text-primary ps-4">Sobre nós</h6>
-                        <h2 class="mt-2">levando qualidade de vida à população de Estreito-MA</h2>
+                        <h2 class="mt-2">Levando qualidade de vida à população de Estreito-MA</h2>
                     </div>
                     <p class="mb-4">
                         O Serviço Autônomo de Água e Esgoto de Estreito-MA, instituído pela Lei Nº 001 de 19 de janeiro de
