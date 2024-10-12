@@ -5,7 +5,8 @@
             <div class="col-md-6 col-lg-3">
                 <h5 class="text-white mb-4">Entre em contato</h5>
                 <p><i class="fa fa-map-marker-alt me-3"></i>Rua João Castelo, 703 - Estreito-MA</p>
-                <p><i class="fa fa-phone-alt me-3"></i>+55 99 3531-6197</p>
+                <p><i class="fa fa-phone-alt me-3"></i>99 3531-6197</p>
+                {{-- <p><i class="fab fa-whatsapp"></i> 99 999194-0825</p> --}}
                 <p><i class="fa fa-envelope me-3"></i>info@saaeestreito.com.br</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
