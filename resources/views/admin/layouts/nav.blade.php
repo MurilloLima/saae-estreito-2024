@@ -46,7 +46,7 @@
               <div class="image">
                   <img src="{{ asset('admin/dist/img/avatar.png') }}" class="img-circle elevation-2" alt="User Image">
               </div>
-              
+
           </div>
 
           <!-- SidebarSearch Form -->
@@ -83,7 +83,7 @@
                                   <p>Notícias</p>
                               </a>
                           </li>
-                          
+
                           <li class="nav-item">
                               <a href="{{ route('admin.portaria.index') }}" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
@@ -91,7 +91,7 @@
                               </a>
                           </li>
                           <li class="nav-item">
-                              <a href="{{ route('admin.portaria.index') }}" class="nav-link">
+                              <a href="{{ route('admin.licitacoes.index') }}" class="nav-link">
                                   <i class="far fa-circle nav-icon"></i>
                                   <p>Licitações e contratos</p>
                               </a>
