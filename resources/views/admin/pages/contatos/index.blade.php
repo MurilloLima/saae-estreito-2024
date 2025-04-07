@@ -37,8 +37,8 @@
                                             <th>Nome</th>
                                             <th>Telefone</th>
                                             <th>Assunto</th>
-                                            <th>Mensagem</th>
                                             <th>Data</th>
+                                            <th></th>
                                             {{-- <th style="width: 40px">#</th> --}}
                                         </tr>
                                     </thead>
@@ -48,8 +48,12 @@
                                                 <td>{{ $item->name }}</td>
                                                 <td>{{ $item->fone }}</td>
                                                 <td>{{ $item->assunto }}</td>
-                                                <td>{{ $item->msg }}</td>
                                                 <td>{{ $item->created_at }}</td>
+                                                <td>
+                                                    <a href="">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </a>
+                                                </td>
                                                 {{-- <td>
                                                     <a href="">Editar</a>
                                                     <a href="">Excluir</a>
