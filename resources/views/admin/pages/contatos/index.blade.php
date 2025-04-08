@@ -22,9 +22,51 @@
         <!-- Main content -->
         <section class="content">
             <div class="container-fluid">
+                <div class="row" style="margin-bottom: 5px;">
+
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+                            Pesquisar
+                        </button>
+                    </div>
+
+                    {{-- //modal --}}
+                    <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form action="{{ route('admin.pages.contato.export') }}" method="post">
+                                    @csrf
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Filtrar por data</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Data inicio</label>
+                                            <input type="date" class="form-control" id=""
+                                                placeholder="Enter email" name="inicio">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Data fim</label>
+                                            <input type="date" class="form-control" id="" placeholder=""
+                                                name="fim">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer justify-content-between">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fecha</button>
+                                        <button type="submit" class="btn btn-primary">Pesquisar</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12">
-                        {{-- <a href="" class="btn btn-primary mb-2">Cadastrar</a> --}}
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Últimos adicionados</h3>

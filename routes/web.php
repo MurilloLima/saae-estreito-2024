@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ExportController;
 use App\Http\Controllers\Admin\PortariasController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\Home\HomeController;
@@ -24,7 +25,7 @@ Route::get('download/', [HomeController::class, 'download'])->name('home.pages.d
 
 Route::get('/dashboard', function () {
     $data = Noticia::latest()->get();
-    return view('admin.pages.noticias.index', compact('data'));
+    return view('admin.pages.contatos.index', compact('data'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -34,13 +35,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/licitacoes/create', [LicitacoeController::class, 'create'])->name('admin.licitacoes.create');
     Route::post('/admin/licitacoes/store', [LicitacoeController::class, 'store'])->name('admin.licitacoes.store');
     Route::delete('admin/licitacoes/delete/{id}', [LicitacoeController::class, 'destroy'])->name('admin.licitacoes.destroy');
-  
+
     //noticias
     Route::get('/admin/noticias', [NoticiaController::class, 'index'])->name('admin.noticias.index');
     Route::get('/admin/noticias/create', [NoticiaController::class, 'create'])->name('admin.noticias.create');
     Route::post('/admin/noticias/store', [NoticiaController::class, 'store'])->name('admin.noticias.store');
     Route::delete('admin/noticias/delete/{id}', [NoticiaController::class, 'destroy'])->name('admin.noticia.destroy');
-  
+
     //portaria
     Route::get('/admin/portaria', [PortariasController::class, 'index'])->name('admin.portaria.index');
     Route::get('/admin/portaria/create', [PortariasController::class, 'create'])->name('admin.portaria.create');
@@ -51,6 +52,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // export contatos
+    Route::post('/contatos/export/', [ExportController::class, 'search'])->name('admin.pages.contato.export');
+
 });
 
 require __DIR__.'/auth.php';
