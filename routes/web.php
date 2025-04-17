@@ -25,7 +25,7 @@ Route::get('download/', [HomeController::class, 'download'])->name('home.pages.d
 
 Route::get('/dashboard', function () {
     $data = Noticia::latest()->get();
-    return view('admin.pages.contatos.index', compact('data'));
+    return view('admin.pages.noticias.index', compact('data'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
