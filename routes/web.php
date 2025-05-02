@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ExportController;
+use App\Http\Controllers\Admin\PDFController;
 use App\Http\Controllers\Admin\PortariasController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\Home\HomeController;
@@ -54,7 +55,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // export contatos
-    Route::post('/contatos/export/', [ExportController::class, 'search'])->name('admin.pages.contato.export');
+    Route::get('generate-pdf', [PDFController::class, 'store'])->name('admin.pages.pdf');
+
 
 });
 

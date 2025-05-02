@@ -1,47 +1,87 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<!DOCTYPE html>
+<html lang="en">
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Murillo Lima - Login</title>
+    <!--begin::Primary Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Murillo Lima - Login">
+    <meta name="author" content="ColorlibHQ">
+    <meta name="description" content="Programador Full Stack">
+    <meta name="keywords"
+        content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard">
+    <!--end::Primary Meta Tags-->
+    <!--begin::Fonts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
+        integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q=" crossorigin="anonymous">
+    <!--end::Fonts-->
+    <!--begin::Third Party Plugin(OverlayScrollbars)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/styles/overlayscrollbars.min.css"
+        integrity="sha256-tZHrRjVqNSRyWg2wbppGnT833E/Ys0DHWGwT04GiqQg=" crossorigin="anonymous">
+    <!--end::Third Party Plugin(OverlayScrollbars)-->
+    <!--begin::Third Party Plugin(Bootstrap Icons)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI=" crossorigin="anonymous">
+    <!--end::Third Party Plugin(Bootstrap Icons)-->
+    <!--begin::Required Plugin(AdminLTE)-->
+    <link rel="stylesheet" href="{{ asset('admin/dist/css/adminlte.css') }}">
+    <!--end::Required Plugin(AdminLTE)-->
+</head>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+<body class="login-page bg-body-secondary app-loaded">
+    <div class="login-box">
+        <div class="card card-outline card-primary">
+            <div class="card-header">
+                <a href="/" class="link-dark text-center link-offset-2 link-opacity-100 link-opacity-50-hover">
+                    <h1 class="mb-0"><b>Murillo Lima</b></h1>
+                </a>
+            </div>
+            <div class="card-body">
+                <p class="login-box-msg">
+                    Faça login para iniciar sua sessão
+                </p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="{{ route('login') }}" method="post">
+                            @csrf
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <label for="loginEmail">Email</label>
+                                    <input id="" type="email" name="email" class="form-control" value=""
+                                        placeholder="E-mail">
+                                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
+
+                                </div>
+                                {{-- <div class="input-group-text"><span class="bi bi-envelope"></span></div> --}}
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <label for="">Password</label>
+                                    <input id="" type="password" class="form-control" name="password" placeholder="">
+                                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+
+                                </div>
+                                {{-- <div class="input-group-text"><span class="bi bi-lock-fill"></span></div> --}}
+                            </div>
+                            <!--begin::Row-->
+
+                            <!-- /.col -->
+                            <div class="col-md-12">
+                                <br>
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                            </div>
+                            <!-- /.col -->
+                        </form>
+                    </div>
+
+                </div>
+            </div>
         </div>
+        <!-- /.login-card-body -->
+    </div>
+    </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+</body>
 
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                {{-- <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a> --}}
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</html>

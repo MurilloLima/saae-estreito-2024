@@ -28,42 +28,9 @@
                         <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
                             Pesquisar
                         </button>
+                        <a href="{{ route('admin.pages.pdf') }}" class="btn">Exportar</a>
                     </div>
 
-                    {{-- //modal --}}
-                    <div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <form action="{{ route('admin.pages.contato.export') }}" method="post">
-                                    @csrf
-                                    <div class="modal-header">
-                                        <h4 class="modal-title">Filtrar por data</h4>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">×</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Data inicio</label>
-                                            <input type="date" class="form-control" id=""
-                                                placeholder="Enter email" name="inicio">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Data fim</label>
-                                            <input type="date" class="form-control" id="" placeholder=""
-                                                name="fim">
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer justify-content-between">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Fecha</button>
-                                        <button type="submit" class="btn btn-primary">Pesquisar</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- /.modal-content -->
-                        </div>
-                        <!-- /.modal-dialog -->
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -75,34 +42,19 @@
                             <div class="card-body">
                                 <table class="table table-bordered">
                                     <thead>
-                                        <tr>
-                                            <th>Nome</th>
-                                            <th>Telefone</th>
-                                            <th>Assunto</th>
-                                            <th>Data</th>
-                                            <th></th>
-                                            {{-- <th style="width: 40px">#</th> --}}
-                                        </tr>
-                                    </thead>
-                                    <tbody>
                                         @foreach ($data as $item)
                                             <tr>
-                                                <td>{{ $item->name }}</td>
-                                                <td>{{ $item->fone }}</td>
-                                                <td>{{ $item->assunto }}</td>
-                                                <td>{{ $item->created_at }}</td>
                                                 <td>
-                                                    <a href="">
-                                                        <i class="fa fa-envelope"></i>
-                                                    </a>
+                                                    <b>Nome:</b> {{ $item->name }} <br>
+                                                    <b>Telefone:</b> {{ $item->fone }} <br>
+                                                    <b>E-amil:</b> {{ $item->email }} <br>
+                                                    <b>Assunto:</b> {{ $item->assunto }} <br>
+                                                    {{ $item->msg }}
                                                 </td>
-                                                {{-- <td>
-                                                    <a href="">Editar</a>
-                                                    <a href="">Excluir</a>
-                                                </td> --}}
                                             </tr>
                                         @endforeach
-                                    </tbody>
+                                    </thead>
+
                                 </table>
                             </div>
                             <!-- /.card-body -->
