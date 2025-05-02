@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Contato;
+use Barryvdh\DomPDF\Facade\Pdf as FacadePdf;
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade\Pdf;
 
 class PDFController extends Controller
 {
@@ -27,10 +27,8 @@ class PDFController extends Controller
      */
     public function store(Request $request)
     {
-
         $data = Contato::all();
-        $pdf = Pdf::loadView('welcome', $data);
-        return $pdf->download('invoice.pdf');
+        return FacadePdf::loadView('admin.pages.contatos.pdf', compact('data'))->stream();
     }
 
     /**
