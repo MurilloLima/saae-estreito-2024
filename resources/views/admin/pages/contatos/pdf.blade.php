@@ -27,6 +27,7 @@
                             <!-- /.card-header -->
                             <div class="card-body">
                                 @foreach ($data as $item)
+                                    <b>Data: {{ $item->created_at }}</b><br>
                                     <b>Nome:</b> {{ $item->name }} <br>
                                     <b>Telefone:</b> {{ $item->fone }} <br>
                                     <b>E-amil:</b> {{ $item->email }} <br>
