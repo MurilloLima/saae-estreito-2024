@@ -27,7 +27,7 @@ class PDFController extends Controller
      */
     public function store(Request $request)
     {
-        $data = Contato::all();
+        $data = Contato::latest()->get();
         return FacadePdf::loadView('admin.pages.contatos.pdf', compact('data'))->stream();
     }
 
