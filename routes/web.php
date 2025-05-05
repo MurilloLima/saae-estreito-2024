@@ -40,7 +40,9 @@ Route::middleware('auth')->group(function () {
     //noticias
     Route::get('/admin/noticias', [NoticiaController::class, 'index'])->name('admin.noticias.index');
     Route::get('/admin/noticias/create', [NoticiaController::class, 'create'])->name('admin.noticias.create');
+    Route::get('/admin/noticia/edit/{id}', [NoticiaController::class, 'edit'])->name('admin.noticias.edit');
     Route::post('/admin/noticias/store', [NoticiaController::class, 'store'])->name('admin.noticias.store');
+    Route::post('/admin/noticias/update/{id}', [NoticiaController::class, 'update'])->name('admin.noticias.update');
     Route::delete('admin/noticias/delete/{id}', [NoticiaController::class, 'destroy'])->name('admin.noticia.destroy');
 
     //portaria

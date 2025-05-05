@@ -69,7 +69,7 @@
                                                 <td>{{ $item->title }}</td>
                                                 <td>{{ $item->desc }}</td>
                                                 <td style="width: 95px;">
-                                                    <a href="" title="Editar" style="" class="btn btn-primary btn-sm">
+                                                    <a href="{{ route('admin.noticias.edit', [$item->id]) }}" title="Editar" style="" class="btn btn-primary btn-sm">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
                                                     <form onsubmit="return confirm('Deseja excluir?');"

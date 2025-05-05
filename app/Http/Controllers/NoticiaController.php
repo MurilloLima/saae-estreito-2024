@@ -67,9 +67,10 @@ class NoticiaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Noticia $noticia)
+    public function edit($id)
     {
-        //
+        $data = Noticia::find($id);
+        return view('admin.pages.noticias.edit', compact('data'));
     }
 
     /**
@@ -77,7 +78,27 @@ class NoticiaController extends Controller
      */
     public function update(Request $request, Noticia $noticia)
     {
-        //
+        // upload de image
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            # code...
+            $image = $request->file('image');
+            // Define um aleatório para o arquivo baseado no timestamps atual
+            $name = uniqid(date('HisYmd'));
+            // Recupera a extensão do arquivo
+            $extension = $image->extension();
+
+            // Define finalmente o nome
+            $nameFile = "{$name}.{$extension}";
+
+            $noticia = $this->noticia->find($request->id);
+            $image->move(public_path('upload/noticias'), $nameFile);
+            $noticia->image = $nameFile;
+            $noticia->title = $request->get('title');
+            $noticia->desc = $request->get('desc');
+            $noticia->content = $request->get('content');
+            $noticia->update();
+            return redirect()->back()->with('msg', 'Edição efetuada com sucesso!');
+        }
     }
 
     /**
