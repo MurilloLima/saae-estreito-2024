@@ -45,6 +45,7 @@
                                         @foreach ($data as $item)
                                             <tr>
                                                 <td>
+                                                    <b>Data:</b> {{ $item->created_at }} <br>
                                                     <b>Nome:</b> {{ $item->name }} <br>
                                                     <b>Telefone:</b> {{ $item->fone }} <br>
                                                     <b>E-amil:</b> {{ $item->email }} <br>
