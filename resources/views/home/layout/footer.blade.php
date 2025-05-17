@@ -10,9 +10,12 @@
                 <p><i class="fa fa-envelope me-3"></i>info@saaeestreito.com.br</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://m.facebook.com/profile.php?id=100069848150932&_rdr#_=_"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social"
+                        href="https://m.facebook.com/profile.php?id=100069848150932&_rdr#_=_"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/saae.estreito/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/saae.estreito/"><i
+                            class="fab fa-instagram"></i></a>
                     <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
@@ -52,7 +55,8 @@
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     &copy; <a class="border-bottom" href="#">SAAE Estreito-MA</a>, Todos os direitos reservados.
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Desenvolvedor <a class="border-bottom" href="https://murillolimadev.com.br/" target="_blank">MURILLO LIMA</a>
+                    Desenvolvedor <a class="border-bottom" href="https://murillolimadev.com.br/" target="_blank">MURILLO
+                        LIMA</a>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
@@ -70,4 +74,7 @@
 
 
 <!-- Back to Top -->
-<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2">
+    {{-- <i class="bi bi-arrow-up"></i> --}}
+    <img src="{{ asset('home/img/qr-code.png') }}" alt="">
+</a>

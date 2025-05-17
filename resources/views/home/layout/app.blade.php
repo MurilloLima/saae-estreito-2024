@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SAAE Estreito-MA - @yield('title')</title>
+
     <!-- Favicon -->
+    <link rel="icon" href="{{ asset('home/img/icon.ico') }}" sizes="any">
     <link rel="icon" type="image/png" href="{{ asset('home/img/icon.png') }}" rel="icon">
 
     <!-- Google Web Fonts -->
@@ -18,6 +20,7 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
 
     <!-- Libraries Stylesheet -->
     <link href="{{ asset('home/lib/animate/animate.min.css') }}" rel="stylesheet">

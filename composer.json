@@ -1,7 +1,7 @@
 {
     "name": "laravel/laravel",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "SSAE Sistema de abastecimento de água de Estreito-MA.",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {
