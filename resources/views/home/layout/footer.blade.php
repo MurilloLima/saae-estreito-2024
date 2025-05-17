@@ -76,5 +76,5 @@
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2">
     {{-- <i class="bi bi-arrow-up"></i> --}}
-    <img src="{{ asset('home/img/qr-code.png') }}" alt="">
+    <img src="{{ asset('home/img/qr-code.png') }}" alt="" style="width: 100px; height: 100px;">
 </a>
