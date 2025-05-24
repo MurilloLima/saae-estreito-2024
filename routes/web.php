@@ -57,7 +57,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // export contatos
-    Route::get('generate-pdf', [PDFController::class, 'store'])->name('admin.pages.pdf');
+    Route::post('generate-pdf', [PDFController::class, 'store'])->name('admin.pages.pdf');
 
 
 });

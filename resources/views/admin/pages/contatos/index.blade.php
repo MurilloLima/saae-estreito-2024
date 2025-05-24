@@ -28,7 +28,39 @@
                         <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
                             Pesquisar
                         </button>
-                        <a href="{{ route('admin.pages.pdf') }}" class="btn">Exportar</a>
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+                            Exportar
+                        </button>
+                        {{-- {{ route('admin.pages.pdf') }} --}}
+                        {{-- MODAL --}}
+                        <div class="modal fade" id="modal-default" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Default Modal</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                        </button>
+                                    </div>
+                                    <form action="{{ route('admin.pages.pdf') }}" method="post">
+                                        <div class="modal-body">
+                                            @csrf
+                                            <label for="">Data início</label>
+                                            <input type="date" name="start" class="form-control">
+                                            <label for="">Data fim</label>
+                                            <input type="date" name="end" class="form-control">
+                                        </div>
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn btn-default"
+                                                data-dismiss="modal">Fechar</button>
+                                            <button type="submit" class="btn btn-primary">Filtrar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
                     </div>
 
                 </div>
