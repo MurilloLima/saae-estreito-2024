@@ -4,7 +4,7 @@
 
 <head>
 
-    <title>Laravel 10 Generate PDF Example - ItSolutionStuff.com</title>
+    <title>SAAE Estreito-MA</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,7 +22,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Últimos contatos</h3>
+                                <h3 class="card-title">Últimos contatos entre as datas {{ date('d/m/Y', strtotime($inicio)) }} e {{ date('d/m/Y', strtotime($fim)) }}</h3>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">

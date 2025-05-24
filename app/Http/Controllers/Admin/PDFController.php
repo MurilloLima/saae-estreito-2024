@@ -27,10 +27,12 @@ class PDFController extends Controller
      */
     public function store(Request $request)
     {
+        $inicio = $request->start;
+        $fim = $request->end;
         $data = Contato::where('created_at', '>=', $request->start)
             ->where('created_at', '<=', $request->end)
             ->get();
-        return FacadePdf::loadView('admin.pages.contatos.pdf', compact('data'))->stream();
+        return FacadePdf::loadView('admin.pages.contatos.pdf', compact('data','inicio','fim'))->stream();
     }
 
     /**
