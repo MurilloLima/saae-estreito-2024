@@ -15,7 +15,7 @@
              <span class="fa fa-bars"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarCollapse">
-             <div class="navbar-nav ms-auto py-0">
+             <div class="navbar-nav ms-auto py-0" style="color: #036AA7 !important;">
                  <a href="{{ route('home.pages.index') }}" class="nav-item nav-link">Home</a>
                  <a href="{{ route('home.pages.sobre.index') }}" class="nav-item nav-link">Sobre</a>
                  <a href="{{ route('home.pages.noticias.index') }}" class="nav-item nav-link">Notícias</a>

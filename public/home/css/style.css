@@ -84,7 +84,7 @@ h6,
     position: relative;
     margin-left: 25px;
     padding: 35px 0;
-    color: var(--light) !important;
+    color: #036AA7;
     outline: none;
     transition: .5s;
 }
@@ -121,6 +121,7 @@ h6,
     .navbar-light .navbar-collapse {
         margin-top: 15px;
         border-top: 1px solid #DDDDDD;
+        background-color: #FFF;
     }
 
     .navbar-light .navbar-nav .nav-link,
@@ -128,6 +129,8 @@ h6,
         padding: 10px 0;
         margin-left: 0;
         color: var(--dark) !important;
+        background-color: #FFF;
+
     }
 
     .navbar-light .navbar-brand h1 {
@@ -147,6 +150,8 @@ h6,
         left: 0;
         border-bottom: 1px solid rgba(256, 256, 256, .1);
         z-index: 999;
+        background-color: #FFF;
+
     }
 
     .sticky-top.navbar-light {
