@@ -3,7 +3,9 @@
      <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
          <a href="{{ route('home.pages.index') }}" class="navbar-brand p-0">
              <h1 class="m-0">
-                 <i class="fa fa-rss me-2"></i>
+                 {{-- <i class="fa fa-rss me-2"></i> --}}
+
+                 <img src="{{ asset('home/img/icon.png') }}" alt="">
                  SAAE
                  <span class="fs-5">Estreito-MA</span>
              </h1>
@@ -18,7 +20,8 @@
                  <a href="{{ route('home.pages.sobre.index') }}" class="nav-item nav-link">Sobre</a>
                  <a href="{{ route('home.pages.noticias.index') }}" class="nav-item nav-link">Notícias</a>
                  <a href="{{ route('home.pages.portarias.index') }}" class="nav-item nav-link">Portarias</a>
-                 <a href="{{ route('home.pages.licitacao.index') }}" class="nav-item nav-link">Licitações e contratos</a>
+                 <a href="{{ route('home.pages.licitacao.index') }}" class="nav-item nav-link">Licitações e
+                     contratos</a>
                  <a href="{{ route('home.pages.contatos.index') }}" class="nav-item nav-link">Contatos</a>
              </div>
              <butaton type="button" class="btn text-secondary ms-3" data-bs-toggle="modal"
