@@ -96,7 +96,7 @@ h6,
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--secondary) !important;
+    color: #036AA7 !important;
 }
 
 .navbar-light .navbar-brand h1 {
