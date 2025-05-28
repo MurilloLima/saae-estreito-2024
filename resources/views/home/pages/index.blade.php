@@ -6,7 +6,7 @@
             <div class="row g-5 py-5">
                 <div class="col-lg-6 text-center text-lg-start">
                     <h1 class="text-white mb-4 animated zoomIn">Prefeitura e SAAE</h1>
-                    <p class="text-white pb-3 animated zoomIn">levando qualidade de vida à população de
+                    <p class="text-white pb-3 animated zoomIn">Levando qualidade de vida à população de
                         Estreito-MA
                     </p>
                     <a href="{{ route('home.pages.licitacao.index') }}"
