@@ -2,7 +2,7 @@
  <div class="container-xxl position-relative p-0">
      <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
          <a href="{{ route('home.pages.index') }}" class="navbar-brand p-0">
-             <h1 class="m-0">
+             <h1 class="m-0" style="color: #036AA7;">
                  {{-- <i class="fa fa-rss me-2"></i> --}}
 
                  <img src="{{ asset('home/img/icon.png') }}" alt="">
