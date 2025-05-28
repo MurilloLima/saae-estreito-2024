@@ -55,8 +55,8 @@
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     &copy; <a class="border-bottom" href="#">SAAE Estreito-MA</a>, Todos os direitos reservados.
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Desenvolvedor <a class="border-bottom" href="https://murillolimadev.com.br/" target="_blank">MURILLO
-                        LIMA</a>
+                     {{-- <a class="border-bottom" href="https://murillolimadev.com.br/" target="_blank">MURILLO
+                        LIMA</a> --}}
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
