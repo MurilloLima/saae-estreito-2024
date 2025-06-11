@@ -61,6 +61,9 @@
                                             <form action="{{ route('admin.noticias.update', [$data->id]) }}"
                                                 class="form-horizontal" method="POST" enctype="multipart/form-data">
                                                 @csrf
+
+                                                <input type="hidden" name="id" value="{{ $data->id }}">
+
                                                 <div class="box-body">
                                                     <div class="form-group">
                                                         <label for="exampleInputFile">Imagem</label>

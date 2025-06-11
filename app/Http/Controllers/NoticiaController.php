@@ -78,12 +78,19 @@ class NoticiaController extends Controller
      */
     public function update(Request $request, Noticia $noticia)
     {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'title' => 'required',
+            'desc' => 'required',
+            'content' => 'required',
+        ]);
         // upload de image
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             # code...
             $image = $request->file('image');
             // Define um aleatório para o arquivo baseado no timestamps atual
             $name = uniqid(date('HisYmd'));
+
             // Recupera a extensão do arquivo
             $extension = $image->extension();
 
@@ -95,12 +102,12 @@ class NoticiaController extends Controller
             $noticia->image = $nameFile;
             $noticia->title = $request->get('title');
             $noticia->desc = $request->get('desc');
+            $noticia->slug = Str::slug($request->title, '-');
             $noticia->content = $request->get('content');
             $noticia->update();
-            return redirect()->back()->with('msg', 'Edição efetuada com sucesso!');
         }
+        return redirect()->back()->with('msg', 'Edição efetuada com sucesso!');
     }
-
     /**
      * Remove the specified resource from storage.
      */
